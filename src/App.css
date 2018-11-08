@@ -77,3 +77,31 @@
 .totalInvestment {
   font-size: calc(5px + 2vmin);
 }
+
+/* MonitorScreen */
+
+.monitorContainer {
+  background-color: mediumpurple;
+  padding: 30px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+/*
+.grid {
+  background-color: green;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.row {
+  background-color: blue;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.col {
+  background-color: red;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+*/

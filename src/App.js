@@ -5,6 +5,7 @@ import ProjectsContainer from './components/ProjectsContainer';
 import StatisticsContainer from './components/StatisticsContainer';
 import HeaderContainer from './components/HeaderContainer';
 import WinnerInvestorsContainer from './components/WinnerInvestorsContainer'
+import MonitorScreen from './components/MonitorScreen'
 
 import { Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
@@ -36,7 +37,7 @@ class App extends Component {
       logged: false,
       input: '',
       value: '',
-      viewMonitor: false,
+      showMonitorScreen: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInput = this.updateInput.bind(this);
@@ -148,36 +149,42 @@ class App extends Component {
   }
 
   render() {
-    if(this.state.logged) {
-      if(this.state.showWinnerInvestors) {
-        return (
-          <div>
-            <HeaderContainer loggedJury={this.state.loggedJury}  />
-            <StatisticsContainer investments={this.state.investments} />
-            <WinnerInvestorsContainer
-              investments={this.state.investments}
-              showWinnerInvestors={this.showWinnerInvestors.bind(this)}
-              project={this.state.project} />
-          </div>
-        );
+    if(!this.state.logged) { // <<<<<<<<<<<<<<<<<<<<<<< quitar el "!"
+      if(this.state.showMonitorScreen) {
+        return <MonitorScreen />
       } else {
-        return (
-          <div>
-            <HeaderContainer loggedJury={this.state.loggedJury}  />
-            <StatisticsContainer investments={this.state.investments} />
-            <ProjectsContainer
-              jury={this.state.loggedJury}
-              showWinnerInvestors={this.showWinnerInvestors.bind(this)} />
-          </div>
-        );
+        if(this.state.showWinnerInvestors) {
+          return (
+            <div>
+              <HeaderContainer loggedJury={this.state.loggedJury}  />
+              <StatisticsContainer investments={this.state.investments} />
+              <WinnerInvestorsContainer
+                investments={this.state.investments}
+                showWinnerInvestors={this.showWinnerInvestors.bind(this)}
+                project={this.state.project} />
+            </div>
+          );
+        } else {
+          return (
+            <div>
+              <HeaderContainer loggedJury={this.state.loggedJury}  />
+              <StatisticsContainer investments={this.state.investments} />
+              <ProjectsContainer
+                jury={this.state.loggedJury}
+                showWinnerInvestors={this.showWinnerInvestors.bind(this)} />
+            </div>
+          );
+        }
       }
     } else {
       return (
         <div className="App">
           <header className="App-header">
+            <br/>
             <p>
-              Ingresar
+              Bienvenido al TecnoEmprende 2018
             </p>
+            <br/>
             <Form inline onSubmit={this.handleSubmit}>
               <FormGroup controlId="formInlineEmail">
                 <ControlLabel>Usuario</ControlLabel>{' '}
@@ -185,6 +192,8 @@ class App extends Component {
               </FormGroup>{' '}
               <Button type="submit">Ingresar</Button>
             </Form>
+            <br/>
+            <br/>
           </header>
         </div>
       );
