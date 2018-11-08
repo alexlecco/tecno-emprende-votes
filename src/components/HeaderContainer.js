@@ -9,7 +9,8 @@ export default class HeaderContainer extends Component {
   render() {
 		return(
       <header className="App-header">
-        <p>TecnoEmprende 2018 - Jurado: {this.props.loggedJury.name}</p>
+        <p>TecnoEmprende 2018</p>
+        {!this.props.loggedJury.is_admin ? (<p>Jurado: {this.props.loggedJury.name}</p>) : <div />}
         <p>Estrellas restantes: {this.props.loggedJury.remaining_stars}</p>
       </header>
 		);

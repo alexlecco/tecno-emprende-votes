@@ -88,19 +88,9 @@ export default class WinnerInvestorContainer extends Component {
 					<div class="projectCard">
 						<Grid>
 							<Row>
-								<Col xs={2}>
+								<Col>
 									<Row className="cellContainer">
 										{this.props.investor.name}
-									</Row>
-								</Col> 
-								<Col xs={2}>
-									<Row className="cellContainer">
-										$ {partial_investment}
-									</Row>
-								</Col>
-								<Col xs={2}>
-									<Row className="cellContainer">
-										{timestamp_inTIME}
 									</Row>
 								</Col>
 							</Row>

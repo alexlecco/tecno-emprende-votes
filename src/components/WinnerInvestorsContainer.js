@@ -148,6 +148,7 @@ export default class WinnerInvestorsContainer extends Component {
   }
 
 	render() {
+
 		return (
 			<div>
 				<div bsStyle="container">
@@ -155,13 +156,10 @@ export default class WinnerInvestorsContainer extends Component {
 						<Button bsStyle="primary" onClick={() => {this.props.showWinnerInvestors()}}>Volver</Button>
 					</div>
 					<div className="center-container">
-						Inversiones: $ {this.props.project.total_investment}
-					</div>
-					<div className="center-container">
 						Estrellas: {this.props.project.total_stars}
 					</div>
 					<div className="center-container">
-						Inversiones recibidas en el proyecto: {this.props.project.name}
+						Podio de inversores del emprendimiento: {this.props.project.name}
 					</div>
 					<Grid>
 						<Row>
@@ -169,11 +167,13 @@ export default class WinnerInvestorsContainer extends Component {
 								this.state.investors.map(
 									(investor) => {
 										return (
-											<WinnerInvestorCard
-												project={this.props.project}
-												investor={investor}
-												investments={this.props.investments}
-											/>
+											<div>
+												<WinnerInvestorCard
+													project={this.props.project}
+													investor={investor}
+													investments={this.props.investments}
+												/>
+											</div>
 										)
 									}
 								)
