@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import ProjectsContainer from './components/ProjectsContainer';
@@ -37,6 +36,7 @@ class App extends Component {
       logged: false,
       input: '',
       value: '',
+      viewMonitor: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInput = this.updateInput.bind(this);
@@ -114,7 +114,7 @@ class App extends Component {
 
   selectJury(juriesRef) {
     juriesRef.on('value', (snap) => {
-      const juryEmail = 'alex@gmail.com';
+      const juryEmail = 'alex@tecno'/*this.state.value*/;
       let juries = [];
 
       snap.forEach((child) => {
@@ -180,7 +180,7 @@ class App extends Component {
             </p>
             <Form inline onSubmit={this.handleSubmit}>
               <FormGroup controlId="formInlineEmail">
-                <ControlLabel>Email</ControlLabel>{' '}
+                <ControlLabel>Usuario</ControlLabel>{' '}
                 <FormControl type="email" value={this.state.input} onChange={this.updateInput} />
               </FormGroup>{' '}
               <Button type="submit">Ingresar</Button>

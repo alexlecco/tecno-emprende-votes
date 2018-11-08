@@ -90,6 +90,8 @@ export default class ProjectCard extends Component {
 									onClick={(value) => this.setState({ rating: value })}
 									start={0}
 									stop={10}
+									emptySymbol={<img src={require('../images/star-empty.png')} className="star-container" alt='empty star' />}
+									fullSymbol={<img src={require('../images/star-full.png')} className="star-container" alt='filled star' />} 
 								/>
 							</Row>
 							<Row className="cellContainer">

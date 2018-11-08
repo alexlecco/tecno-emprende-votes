@@ -44,6 +44,11 @@
   font-size: calc(10px + 2vmin);
 }
 
+.star-container {
+  width: 25px;
+  height: 25px;
+}
+
 .center-container {
   min-height: 50px;
   display: flex;
