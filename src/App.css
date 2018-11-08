@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,4 +29,42 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-container {
+  background-color: #282c34;
+}
+
+.cellContainer {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.center-container {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.left-container {
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+
+/* ProjectCard */
+.projectCard {
+  background-color: beige;
+  color: #111111;
+  padding: 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.totalInvestment {
+  font-size: calc(5px + 2vmin);
 }

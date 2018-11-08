@@ -30,7 +30,7 @@ export default class StatisticsContainer extends Component {
 		return(
 			<div className="center-container">
         Total de inversiones: $ {this.state.APTI}
-        <Button 
+        <Button
           bsStyle="primary"
           onClick={() => this.updateAPTI(this.APTIRef, this.props.investments)}>
             Actualizar
