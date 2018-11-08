@@ -114,7 +114,7 @@ class App extends Component {
 
   selectJury(juriesRef) {
     juriesRef.on('value', (snap) => {
-      const juryEmail = this.state.value;
+      const juryEmail = 'alex@gmail.com';
       let juries = [];
 
       snap.forEach((child) => {

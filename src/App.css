@@ -40,6 +40,10 @@
   padding: 5px 0;
 }
 
+.cellContainerText {
+  font-size: calc(10px + 2vmin);
+}
+
 .center-container {
   min-height: 50px;
   display: flex;

@@ -52,7 +52,7 @@ export default class ProjectCard extends Component {
 			<div class="projectCard">
 				<Grid>
 					<Row>
-						<Col xs={8} md={6}>
+						<Col xs={6} md={4}>
 							<Row className="cellContainer">
 							<Button onClick={() => {this.props.showWinnerInvestors(this.props.project)}}>
 								{this.props.project.name}
@@ -62,20 +62,24 @@ export default class ProjectCard extends Component {
 								{this.props.project.author}
 							</Row>
 							<Row className="cellContainer">
-								Total de estrellas: {this.props.project.total_stars}
+								<p className="cellContainerText">
+									Total de estrellas: {this.props.project.total_stars}
+								</p>
 							</Row>
 						</Col>
-						<Col xs={5} md={3}>
+						<Col xs={6} md={4}>
 							<Row className="cellContainer">
 								Total de inversiones recibidas
 							</Row>
 							<div className="totalInvestment">
 								<Row className="cellContainer">
-									$ {this.props.project.total_investment}
+									<p className="cellContainerText">
+										$ {this.props.project.total_investment}
+									</p>
 								</Row>
 							</div>
 						</Col>
-						<Col xs={5} md={3}>
+						<Col xs={6} md={4}>
 							<Row className="cellContainer">
 								<Button bsStyle="success" onClick={() => this.voteProject()}>Votar</Button>
 								<Button bsStyle="danger" onClick={() => {this.setState({ rating: 0 })}}>Limpiar</Button>
@@ -84,6 +88,8 @@ export default class ProjectCard extends Component {
 								<Rating
 									initialRating={this.state.rating}
 									onClick={(value) => this.setState({ rating: value })}
+									start={0}
+									stop={10}
 								/>
 							</Row>
 							<Row className="cellContainer">
