@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import firebaseApp from './firebase';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +15,8 @@ class App extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInput = this.updateInput.bind(this);
+    
+    this.juriesRef = firebaseApp.database().ref().child('juries');
   }
 
   handleSubmit(event) {
@@ -28,7 +32,6 @@ class App extends Component {
   }
 
   render() {
-
     if(this.state.logged) {
       return (
         <div className="App">
