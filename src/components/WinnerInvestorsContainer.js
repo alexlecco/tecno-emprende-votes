@@ -49,22 +49,6 @@ export default class WinnerInvestorsContainer extends Component {
               partial_investment: child.val().investments_inProjects.proj06.partial_investment,
               last_timestamp: child.val().investments_inProjects.proj06.last_timestamp,
             },
-            proj07: {
-              partial_investment: child.val().investments_inProjects.proj07.partial_investment,
-              last_timestamp: child.val().investments_inProjects.proj07.last_timestamp,
-            },
-            proj08: {
-              partial_investment: child.val().investments_inProjects.proj08.partial_investment,
-              last_timestamp: child.val().investments_inProjects.proj08.last_timestamp,
-            },
-            proj09: {
-              partial_investment: child.val().investments_inProjects.proj09.partial_investment,
-              last_timestamp: child.val().investments_inProjects.proj09.last_timestamp,
-            },
-            proj10: {
-              partial_investment: child.val().investments_inProjects.proj10.partial_investment,
-              last_timestamp: child.val().investments_inProjects.proj10.last_timestamp,
-            },
           },
           name: child.val().name,
           remaining_funds: child.val().remaining_funds,
@@ -111,30 +95,6 @@ export default class WinnerInvestorsContainer extends Component {
 								return a.investments_inProjects.proj06.last_timestamp > b.investments_inProjects.proj06.last_timestamp;							
 							} else {
 								return a.investments_inProjects.proj06.partial_investment < b.investments_inProjects.proj06.partial_investment;
-							}
-						case 'proj07':
-							if(a.investments_inProjects.proj07.partial_investment === b.investments_inProjects.proj07.partial_investment) {
-								return a.investments_inProjects.proj07.last_timestamp > b.investments_inProjects.proj07.last_timestamp;							
-							} else {
-								return a.investments_inProjects.proj07.partial_investment < b.investments_inProjects.proj07.partial_investment;
-							}
-						case 'proj08':
-							if(a.investments_inProjects.proj08.partial_investment === b.investments_inProjects.proj08.partial_investment) {
-								return a.investments_inProjects.proj08.last_timestamp > b.investments_inProjects.proj08.last_timestamp;							
-							} else {
-								return a.investments_inProjects.proj08.partial_investment < b.investments_inProjects.proj08.partial_investment;
-							}
-						case 'proj09':
-							if(a.investments_inProjects.proj09.partial_investment === b.investments_inProjects.proj09.partial_investment) {
-								return a.investments_inProjects.proj09.last_timestamp > b.investments_inProjects.proj09.last_timestamp;							
-							} else {
-								return a.investments_inProjects.proj09.partial_investment < b.investments_inProjects.proj09.partial_investment;
-							}
-						case 'proj10':
-							if(a.investments_inProjects.proj10.partial_investment === b.investments_inProjects.proj10.partial_investment) {
-								return a.investments_inProjects.proj10.last_timestamp > b.investments_inProjects.proj10.last_timestamp;							
-							} else {
-								return a.investments_inProjects.proj10.partial_investment < b.investments_inProjects.proj10.partial_investment;
 							}
 						default:
 					}

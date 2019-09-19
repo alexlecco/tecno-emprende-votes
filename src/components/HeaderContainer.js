@@ -9,7 +9,7 @@ export default class HeaderContainer extends Component {
   render() {
 		return(
       <header className="App-header">
-        <p>TecnoEmprende 2018 - Jurado: {this.props.loggedJury.name}</p>
+        <p>TecnoEmprende 2019 - Jurado: {this.props.loggedJury.name}</p>
         <p>Estrellas restantes: {this.props.loggedJury.remaining_stars}</p>
       </header>
 		);

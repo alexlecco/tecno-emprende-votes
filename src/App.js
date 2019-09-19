@@ -115,7 +115,7 @@ class App extends Component {
 
   selectJury(juriesRef) {
     juriesRef.on('value', (snap) => {
-      const juryEmail = 'alex@tecno'/*this.state.value*/;
+      const juryEmail = this.state.value; //'alex@tecno'/*this.state.value*/;
       let juries = [];
 
       snap.forEach((child) => {
@@ -149,7 +149,7 @@ class App extends Component {
   }
 
   render() {
-    if(!this.state.logged) { // <<<<<<<<<<<<<<<<<<<<<<< quitar el "!"
+    if(this.state.logged) { // <<<<<<<<<<<<<<<<<<<<<<< quitar el "!"
       if(this.state.showMonitorScreen) {
         return <MonitorScreen />
       } else {
@@ -182,7 +182,7 @@ class App extends Component {
           <header className="App-header">
             <br/>
             <p>
-              Bienvenido al TecnoEmprende 2018
+              Bienvenido al TecnoEmprende 2019
             </p>
             <br/>
             <Form inline onSubmit={this.handleSubmit}>

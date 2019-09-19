@@ -55,22 +55,6 @@ export default class WinnerInvestorContainer extends Component {
 				timestamp_inMS = this.props.investor.investments_inProjects.proj06.last_timestamp;
 				partial_investment = this.props.investor.investments_inProjects.proj06.partial_investment;
 				break;
-			case 'proj07': 
-				timestamp_inMS = this.props.investor.investments_inProjects.proj07.last_timestamp;
-				partial_investment = this.props.investor.investments_inProjects.proj07.partial_investment;
-				break;
-			case 'proj08': 
-				timestamp_inMS = this.props.investor.investments_inProjects.proj08.last_timestamp;
-				partial_investment = this.props.investor.investments_inProjects.proj08.partial_investment;
-				break;
-			case 'proj09': 
-				timestamp_inMS = this.props.investor.investments_inProjects.proj09.last_timestamp;
-				partial_investment = this.props.investor.investments_inProjects.proj09.partial_investment;
-				break;
-			case 'proj10': 
-				timestamp_inMS = this.props.investor.investments_inProjects.proj10.last_timestamp;
-				partial_investment = this.props.investor.investments_inProjects.proj10.partial_investment;
-				break;
 			default:
 				break;
 		}
